@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:focusableInTouchMode="false"
+        android:textColor="@android:color/black"
+        android:focusable="false"
+        android:inputType="number"
+        android:hint="1st Value"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:focusableInTouchMode="false"
+        android:textColor="@android:color/black"
+        android:inputType="number"
+        android:hint="2nd Value"/>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/button_num"/>
+        <include layout="@layout/button_num"/>
+
+        <TableRow>
+            <Button style="@style/Button"
+                android:text="Add"
+                android:id="@+id/button_add">
+            </Button>
+            <Button style="@style/Button"
+                android:text="Substract"
+                    android:id="@+id/button_sub"></Button>
+        </TableRow>
+        <TableRow>
+            <Button style="@style/Button"
+                android:text="Multiply"
+                    android:id="@+id/button_mul"></Button>
+            <Button style="@style/Button"
+                android:text="Divide"
+                    android:id="@+id/button_div"></Button>
+        </TableRow>
+        <TableRow>
+            <Button
+                style="@style/Button"
+                android:text="Reset"
+                android:id="@+id/button_reset"
+                android:layout_gravity="center_horizontal"/>
+            <Button
+                style="@style/Button"
+                android:text="Result"
+                android:id="@+id/button_result"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:enabled="false"
+        android:hint="Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="false"
+        android:textColor="@android:color/black"/>
+</LinearLayout>
